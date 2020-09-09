@@ -13,3 +13,4 @@ psycopg2-binary==2.8.4
 py-gfm==0.1.4
 pynetbox==4.2.1
 requests==2.22.0
+django-prometheus==2.1.0

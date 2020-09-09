@@ -217,9 +217,11 @@ INSTALLED_APPS = [
     "peeringdb",
     "users",
     "utils",
+    "django_prometheus",
 ]
 
 MIDDLEWARE = [
+    "django_prometheus.middleware.PrometheusBeforeMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -232,6 +234,7 @@ MIDDLEWARE = [
     "utils.middleware.ExceptionCatchingMiddleware",
     "utils.middleware.ObjectChangeMiddleware",
     "utils.middleware.RequireLoginMiddleware",
+    "django_prometheus.middleware.PrometheusAfterMiddleware",
 ]
 
 ROOT_URLCONF = "peering_manager.urls"
